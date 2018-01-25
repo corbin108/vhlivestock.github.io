@@ -1,0 +1,96 @@
+
+<html> 
+	<head>
+		<link type="text/css" rel="stylesheet" href="main.css" />
+		<title>VH Home</title> 
+		<script>
+			function banner(){ 
+			var text = confirm("Reload?"); 
+			return text;
+			} 
+			function answer(){
+				var radio = document.getElementsByName("trivia"); 
+				var selection = false; 
+				var message = "";
+				for( var i = 0; i < radio.length; i++) { 
+					if(radio[i].value == "1100" && radio[i].checked == true) { 
+					selection = true; 
+					} //end if statement 
+				} //end for loop
+				if(selection == true) {
+				message = message + "<b><p style='color:green'>Way to go!</p></b>"; 
+				} else { 
+				message = message + "<b><p style='color:red'>Try again my friend.</p></b>"; 
+				}
+				document.getElementById("response").innerHTML = message;
+			}// end of answer js
+
+		</script>
+	</head> 
+	<body id="background"> 
+		<a href="index.html" onclick="return banner()"><header id="header">VH Livestock</header></a>
+		<nav>
+			<ul id="navmenu">
+				<li id="navitem"><a class="Link"href="index.html">Home</a></li>
+				<li id="navitem"><a class="Link"href="about.html">About</a></li>
+				<li id="navitem"><a class="Link"href="image.html">Image Gallary</a></li>
+				<li id="navitem"><a class="Link"href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+		<center>
+			<h1><u id="">VH Livestock Steer Showing</u></h1>
+			<p><i> In this website <span id="VH">The VH Livestock team</span> will teach you how to manage and show a steer, this will include lists of everyting you need to become a sucssesful showman.<p></i>
+				<div class="olbox">
+					<ol>
+						<li>Things You Will Need</li>
+					</ol>
+					<ul>
+						<li class="listitem">Halter</li>
+						<li class="listitem">Show Stick</li>
+						<li class="listitem">Steer</li>
+						<li class="listitem">Gloves(optional)</li>
+					</ul>
+				</div>
+					<img src = "https://images.stockfreeimages.com/3148/sfi/free_31485213.jpg"/>
+					<img src = "https://www.stockfreeimages.com/Cows-thumb628807.jpg"/>
+					<hr>
+					Corbin Hicken, Joel Hicken, Jayden Hicken, Ashlyn Hicken,
+					Breeana Hicken, Robert Hicken, Todd Hicken, Aaron Hicken,
+					Kyler Hicken, Hallie Hicken,
+					John Robert Hicken, John Robert Hicken II
+					</br>
+					For feed Go to <a href = "https://www.purinamills.com/show-feed">This Website</a>
+					<hr/>
+					</center>
+					<div id="rightside">
+						<br/>
+						<div id="wrap-trivia">
+							<h2>Show Cattle Trivia Question</h2>
+							<p class="listitem">What is the minimum <b>weight</b> for a show calf?</p>
+							<form>
+								<div id = response>
+									<input type="radio" name="trivia" value="1200"> 1200 <br>
+									<input type="radio" name="trivia" value="1000"> 1000 <br>
+									<input type="radio" name="trivia" value="1100"> 1100 <br>
+									<input type="radio" name="trivia" value="900"> 900 <br> 
+									<input type="button" value="submit" id="button" onclick="answer()">
+								</div>
+							</form>
+						</div>
+					</div>
+					<div id="leftside">
+						<br/>
+						<iframe width="560" height="315"
+						src="https://www.youtube.com/embed/bTHr-XRLc9M" 
+						frameborder="0"; id = "vid" encrypted-media"
+						allowfullscreen>
+						</iframe>
+						<br/>
+						<audio width="400" height="220" controls id="aud">
+							<source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg">
+						</audio> 
+						<br/>
+					</div>
+		<footer>created by corbin hicken</footer>
+	</body> 
+</html>
